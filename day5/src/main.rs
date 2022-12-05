@@ -42,7 +42,10 @@ fn main() {
             .into_iter()
             .map(|_| stacks[from_stack - 1].pop().unwrap())
             .collect();
-        x.iter().rev().map(|i| stacks[to_stack-1].push(*i)).collect()
+        x.iter()
+            .rev()
+            .map(|i| stacks[to_stack - 1].push(*i))
+            .collect()
         // let idx = stacks[from_stack-1].len()- num_moves;
         // let x = stacks[from_stack-1].split_at(idx).1;
         // stacks[to_stack-1].extend_from_slice(x);
