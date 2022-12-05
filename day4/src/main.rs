@@ -31,10 +31,11 @@ impl ElfPair {
             right_end: right_end.to_string().parse::<u32>().unwrap(),
         })
     }
-    fn is_contained(self: Self) -> bool {
-        (self.left_start <= self.right_start && self.right_end <= self.left_end)
-            || (self.right_start <= self.left_start && self.left_end <= self.right_end)
-    }
+    // part 1
+    // fn is_contained(self: Self) -> bool {
+    //     (self.left_start <= self.right_start && self.right_end <= self.left_end)
+    //         || (self.right_start <= self.left_start && self.left_end <= self.right_end)
+    // }
     fn is_overlapping(self: Self) -> bool {
         is_overlapping(
             (self.left_start, self.left_end),
